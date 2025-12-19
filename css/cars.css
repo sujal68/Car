@@ -1,0 +1,541 @@
+:root {
+    --theme-color: #f5b754;
+    --p-color: #999999;
+    --bg-dark: #222222;
+
+}
+
+body {
+    font-family: 'Outfit';
+    background-color: #1B1B1B;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h6 {
+    font-size: 10px;
+    color: var(--theme-color);
+    letter-spacing: 6px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+p {
+    color: var(--p-color);
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+.py {
+    padding: 90px 0;
+}
+
+.transition {
+    transition-duration: 0.5s;
+}
+
+h2 span {
+    color: var(--theme-color);
+}
+
+/* header */
+header .contact-info p {
+    font-size: 12px;
+}
+
+header .header-contect .phone-icone {
+    padding: 9px 13px;
+    border: 1px solid var(--theme-color) !important;
+    transition-duration: 0.5s;
+}
+
+header .header-contect .phone-icone:hover {
+    background-color: var(--theme-color);
+    color: var(--bg-dark) !important;
+    transition-duration: 0.5s;
+}
+
+header a {
+    transition-duration: 0.5s;
+}
+
+header a:hover {
+    color: var(--theme-color) !important;
+    transition-duration: 0.5s;
+}
+
+header nav .sub-menu ul {
+    min-width: 200px;
+    background-color: var(--bg-dark);
+    transition: all 0.5s ease;
+}
+
+header nav .sub-menu ul li a:hover {
+    transform: translateX(5px);
+}
+
+header nav .sub-menu .mega-menu {
+    left: 110% !important;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+header nav .sub-menu .mega-menu ul {
+    background-color: #2B2B2B;
+}
+
+header nav .sub-menu ul li:hover .mega-menu,
+header nav ul li:hover .sub-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    transition-duration: 0.5s;
+}
+
+header .sub-menu i {
+    font-size: 13px;
+}
+
+/* banner */
+.banner {
+    background-image: url(../images/3-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    z-index: -1;
+}
+
+.banner:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.466);
+    z-index: -1;
+}
+
+.body-design {
+    width: 1px;
+    height: 55px;
+    background-color: var(--theme-color);
+}
+
+.banner .banner-design {
+    bottom: -27px;
+}
+
+/* product */
+.product-catalogue {
+    height: 300px;
+    margin-bottom: 180px;
+    position: relative;
+}
+
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-catalogue:hover .product-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Half image + half below setup */
+.product-info {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 90%;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 992px) {
+    .product-catalogue {
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+    .product-info {
+        position: relative;
+        transform: none;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: -60px;
+    }
+}
+
+/* Details button and price */
+.product .info-right a {
+    background-color: var(--theme-color);
+    transition: 0.3s;
+}
+
+.product .info-right a:hover {
+    background-color: white;
+    color: black;
+}
+
+.product .info-right h5 {
+    color: var(--theme-color);
+}
+
+.product .info-right h5 sub {
+    color: var(--p-color);
+    font-size: 13px;
+}
+
+/* List items */
+.product ul li {
+    color: var(--p-color);
+    font-size: 14px;
+}
+
+.product ul li i {
+    color: var(--theme-color);
+}
+
+
+
+/* poster-1 */
+.poster-1,
+.poster-2,
+.poster-3 {
+    background-image: url(../images/2-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+
+.poster-1::after,
+.poster-2::after,
+.poster-3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.382);
+    z-index: -1 !important;
+}
+
+.poster-1 h6,
+.poster-2 h6 {
+    z-index: 9 !important;
+}
+
+.poster-1 form .rent-item {
+    background-color: var(--bg-dark);
+    width: auto !important;
+}
+
+.poster-1 form select,
+.poster-1 form input {
+    background-color: var(--bg-dark);
+    color: var(--p-color);
+    font-size: 14px;
+    border: none;
+}
+
+.poster-1 form select:focus,
+.poster-1 form input:focus {
+    outline: none;
+}
+
+.poster-1 .rent-item a {
+    background-color: var(--theme-color);
+}
+
+.poster-1 .rent-item a:hover {
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+
+/* compony */
+.compony {
+    background-color: var(--bg-dark);
+}
+
+.compony .item img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.compony-carousel .item img {
+    transition: filter 0.5s ease;
+}
+
+.compony-carousel .item img:hover {
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
+}
+
+/* footer */
+footer .footer-about h5 {
+    background-color: var(--theme-color);
+}
+
+footer h4 {
+    font-size: 14px;
+}
+
+footer .footer-about ul li a {
+    border: 1px solid var(--theme-color);
+    width: 50px;
+    height: 50px;
+}
+
+footer .footer-about ul li a:hover {
+    background-color: var(--theme-color);
+    color: var(--bg-dark) !important;
+    transition-duration: 0.5s;
+}
+
+footer .footer-item h5 {
+    font-size: 21px;
+}
+
+footer .footer-item ul li {
+    list-style-type: disc;
+}
+
+footer .footer-item ul li::marker {
+    color: var(--theme-color);
+}
+
+footer .footer-item ul li a:hover {
+    color: var(--theme-color) !important;
+    transition-duration: 0.5s;
+}
+
+footer input {
+    background-color: transparent;
+    border: 1px solid var(--theme-color);
+}
+
+footer input::placeholder,
+footer input {
+    color: white;
+    font-weight: 300;
+}
+
+footer input:focus {
+    outline: none;
+}
+
+/* bottom to top */
+.bottom-to-top a {
+    color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+    width: 55px;
+    height: 55px;
+}
+
+
+/* Mobile Navigation */
+.navbar-toggler {
+    border: 1px solid var(--theme-color);
+    padding: 8px 12px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5b754' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 20px;
+    height: 20px;
+}
+
+.mobile-nav ul li a:hover {
+    color: var(--theme-color) !important;
+    transition-duration: 0.5s;
+}
+
+/* Search Input Styles */
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(245, 183, 84, 0.3);
+}
+
+.search-input::placeholder {
+    color: var(--p-color);
+}
+
+/* Search result alignment fix */
+.car-item {
+    transition: opacity 0.3s ease;
+    margin-bottom: 85px !important;
+}
+
+.car-item[style*="visibility: hidden"] {
+    opacity: 0;
+}
+
+/* Improved product card responsiveness */
+.product-catalogue {
+    margin-bottom: 100px;
+}
+
+/* Responsive Improvements */
+@media (max-width: 991.98px) {
+    header .container {
+        padding: 0 15px;
+    }
+
+    .header-nav {
+        display: none !important;
+    }
+
+    .mobile-nav {
+        background-color: var(--bg-dark);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .poster-1 form .rent-item {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .poster-1 form select,
+    .poster-1 form .rent-item a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-about {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-about>div {
+        justify-content: center;
+    }
+
+    .pagination ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .py {
+        padding: 80px 0;
+    }
+
+    .product-catalogue {
+        margin-bottom: 80px;
+    }
+
+    .product-info {
+        padding: 15px !important;
+    }
+
+    .product-info h5 {
+        font-size: 18px;
+    }
+
+    .product-info ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .product-info ul li {
+        font-size: 12px;
+    }
+
+    .product-info .info-right {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .product-info .info-right a {
+        padding: 10px 20px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .banner h2 {
+        font-size: 25px;
+    }
+
+    .banner h6 {
+        font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .col-12 {
+        padding: 0 10px;
+    }
+
+    .product-catalogue {
+        margin-bottom: 60px;
+    }
+
+    .search-section {
+        padding: 0 10px;
+    }
+}
+
+.collection-info h6 {
+    letter-spacing: 0px !important;
+}
