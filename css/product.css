@@ -161,6 +161,8 @@
             height: 3px;
             background-color: var(--theme-color);
         }
+
+        
         
         @media (max-width: 768px) {
             .product-detail-hero {

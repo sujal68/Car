@@ -469,6 +469,10 @@ footer input:focus {
         padding: 80px 0;
     }
 
+    .banner h6{
+        margin-top: 100px;
+    }
+    
     .product-catalogue {
         margin-bottom: 80px;
     }
